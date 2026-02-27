@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from movie import views as movieViews
+from news import views as newsViews
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -24,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', movieViews.home),
     path('about/', movieViews.about),
+    path('news/', newsViews.news_list),
+    path('statistics/', movieViews.statistics_view),
+    path('signup/', movieViews.signup),
     
 ]
 

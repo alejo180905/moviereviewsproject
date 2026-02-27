@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h1>Sign Up</h1>
+  {% if email %}
+    <div class="alert alert-success">Email recibido: <strong>{{ email }}</strong></div>
+  {% else %}
+    <p>Pasa el email por GET: <code>?email=tu@email.com</code></p>
+  {% endif %}
+  <a href="/" class="btn btn-secondary mt-3">Volver a Home</a>
+</div>
+{% endblock %}

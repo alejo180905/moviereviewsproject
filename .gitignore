@@ -1,0 +1,20 @@
+# Base de datos
+db.sqlite3
+
+# Archivos CSV y JSON de datos
+movies_initial.csv
+movies.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store

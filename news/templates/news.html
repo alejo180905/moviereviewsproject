@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Noticias</h1>
+
+    {% for item in news_list %}
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#0d6efd"></rect>
+                        <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="24">Noticia</text>
+                    </svg>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.headline }}</h5>
+                        <p class="card-text text-muted small"><small>{{ item.date }}</small></p>
+                        <p class="card-text">{{ item.body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p class="text-muted">No hay noticias publicadas.</p>
+    {% endfor %}
+</div>
+{% endblock %}
